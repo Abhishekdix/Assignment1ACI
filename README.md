@@ -9,6 +9,7 @@ loyal and print the result.
 thread and data must be combined from all threads.
 
 Code:
+   
     while ((line = reader.readLine()) != null) {
                            
                             if (payDetail == null) {
@@ -16,10 +17,14 @@ Code:
                                 payDetail = new Payment();
                             }
                             System.out.println(line);
+
+                            
     The code iterates each lines from file and prints each lines from all Threads .
 2 .Sort the payment details by date and display it
 Code: 
  	        Collections.sort(payDetails, (a, b) ->( (a.getPaymentDate()).compareTo((b.getPaymentDate()))));
+
+          
 Using Collections built sort in order of Payment Date which is stored in Object Array List.
 
 
