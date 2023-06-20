@@ -22,7 +22,9 @@ Code:
     The code iterates each lines from file and prints each lines from all Threads .
 2 . Sort the payment details by date and display it.
    Code: 
- 	        Collections.sort(payDetails, (a, b) ->( (a.getPaymentDate()).compareTo((b.getPaymentDate()))));
+ 	        
+          Collections.sort(payDetails, (a, b) ->
+          ( (a.getPaymentDate()).compareTo((b.getPaymentDate()))));
 
           
 Using Collections built sort in order of Payment Date which is stored in Object Array List.
@@ -35,7 +37,10 @@ Complete Payment Details & Details sort by Date
 3. Sort the payment details by amount and display it.
    code :
 
- Collections.sort(payDetails, (a, b) -> Double.compare(a.getPaidAmount(), b.getPaidAmount()));
+
+   Collections.sort(payDetails, (a, b) ->
+    Double.compare(a.getPaidAmount(), b.getPaidAmount()));
+   
 
  Using Collections built sort in order of Payment Amount which is stored in Object Array List.
 
@@ -47,6 +52,7 @@ intersection of high loyal and low loyal and print the result call them as mediu
 The same customer can fall under more than one category.
 
 code :
+
 
 HashMap<String,Double> hashMap=new HashMap<>();
         
