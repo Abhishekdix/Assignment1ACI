@@ -38,8 +38,8 @@ Complete Payment Details & Details sort by Date
    code :
 
 
-   Collections.sort(payDetails, (a, b) ->
-    Double.compare(a.getPaidAmount(), b.getPaidAmount()));
+          Collections.sort(payDetails, (a, b) ->
+          (Double.compare(a.getPaidAmount(), b.getPaidAmount())));
    
 
  Using Collections built sort in order of Payment Amount which is stored in Object Array List.
@@ -54,7 +54,7 @@ The same customer can fall under more than one category.
 code :
 
 
-HashMap<String,Double> hashMap=new HashMap<>();
+   HashMap<String,Double> hashMap=new HashMap<>();
         
         for(Payment payDetail : payDetails) {
 
