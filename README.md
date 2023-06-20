@@ -1,4 +1,28 @@
-# Assignment1ACI OUTPUT
+# Assignment1
+Question: 
+Consider you are a Payment provider, and you are giving payment solutions. Find the top 3 
+paying customers (based on total amount paid) label them high loyal and Find the bottom 
+3 paying customer and label them low loyal. Find the intersection of high loyal and low 
+loyal and print the result.
+
+1 . Write a program to read the files from the folder. Each file must be read as a separate 
+thread and data must be combined from all threads.
+
+Code:
+    while ((line = reader.readLine()) != null) {
+                           
+                            if (payDetail == null) {
+                             //Creating 
+                                payDetail = new Payment();
+                            }
+                            System.out.println(line);
+    The code iterates each lines from file and prints each lines from all Threads .
+2 .Sort the payment details by date and display it
+Code: 
+ 	        Collections.sort(payDetails, (a, b) ->( (a.getPaymentDate()).compareTo((b.getPaymentDate()))));
+Using Collections built sort in order of Payment Date which is stored in Object Array List.
+
+
 Complete Payment Details & Details sort by Date
 ![image](https://github.com/Abhishekdix/Assignment1ACI/assets/81672558/5b2ee5a5-bf4d-4728-a55f-9c925d92ef4e)
 
