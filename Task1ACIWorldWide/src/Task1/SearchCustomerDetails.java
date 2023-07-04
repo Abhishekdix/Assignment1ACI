@@ -6,11 +6,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
 public class SearchCustomerDetails {
-     
+	List<Customer> customers=new ArrayList<Customer>();
+	HashMap<String,Integer> custName=new HashMap<>();
+	
 	public  void SearchCustomerDetail() throws FileNotFoundException {
 		File file=new File("C:\\Users\\pc\\Desktop\\DetailsACIWorldWide\\CustomerDetails\\CustomerDetails.txt"); 
  
@@ -18,7 +21,7 @@ public class SearchCustomerDetails {
 		BufferedReader reader = new BufferedReader(new FileReader(file));
         String line;
         Payment payDetail = null;
-        List<Customer> customers=new ArrayList<Customer>();
+        
         try {
 			while ((line = reader.readLine()) != null) {
 			    // Create a FileDetails object
@@ -28,6 +31,8 @@ public class SearchCustomerDetails {
 			    }
 			    
 			    String[] lineData = line.split(",");
+			    custName.put(lineData[0],1);
+			    
 			    Customer customer=new Customer();
 			    customer.setName(lineData[0]);
 			    customer.setEmail(lineData[1]);
@@ -36,9 +41,8 @@ public class SearchCustomerDetails {
 			
 			
 }
-			
 		
-		this.getInfo(customers);
+//		this.getInfo(customers);
 		
 		
 		} 
@@ -51,7 +55,7 @@ public class SearchCustomerDetails {
 	
 	
 }
-	public void  getInfo(List<Customer> customers) {
+	public void  getInfo() {
 		System.out.println("Enter the Name of Customer\n");
 		Scanner inpScanner=new Scanner(System.in);
 		String findDetails;
@@ -64,4 +68,10 @@ public class SearchCustomerDetails {
 		}
 		}		
 	}
+	
+	public int verify(String custmerName) {
+		return custName.getOrDefault(custmerName, 0);
+	}
+	
+	
 }
