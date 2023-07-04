@@ -130,7 +130,7 @@ public class Task1ACIWorldWide {
             
           //To get information of Individual Customer
            
-            srCustomerDetails.SearchCustomerDetail();
+            
             srCustomerDetails.getInfo();
            
             
