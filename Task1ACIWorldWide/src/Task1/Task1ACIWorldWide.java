@@ -108,11 +108,11 @@ public class Task1ACIWorldWide {
         
      // Check all threads are done execution.
         try {
-        boolean allThreadsDone = true;
+        boolean allThreads = true;
         for (Thread thread : threads) {
-            allThreadsDone &= !thread.isAlive();
+            allThread &= !thread.isAlive();
         }
-        if (allThreadsDone) {
+        if (allThreads) {
            
         	//To get Data Based on Date
             SortByDate sortByDate=new SortByDate();
