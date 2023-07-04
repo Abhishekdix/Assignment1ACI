@@ -24,6 +24,9 @@ public class Task1ACIWorldWide {
             }
         }
         
+        SearchCustomerDetails srCustomerDetails=new SearchCustomerDetails();
+        srCustomerDetails.SearchCustomerDetail();
+        
         System.out.println("The Details of all files :\n");
         System.out.println("ID"+"  "+"  Date"+"   " +"Amount"+" "+"Paid By"+" "+"Name");
         //Creating list of Payment Object
@@ -48,9 +51,24 @@ public class Task1ACIWorldWide {
                              //Creating 
                                 payDetail = new Payment();
                             }
-                            System.out.println(line);
+                            
                             String[] lineData = line.split(",");
- 
+                            
+                            //Test scenarios 
+                            //All the Details are important Checking for missing details
+                            if(lineData.length!=5) {
+                            	//call for data collection function function
+                            	continue;
+                            }
+                            
+                            if(srCustomerDetails.verify(lineData[4])==0) {
+                            	//Call for Enter Customer Details
+                            	continue;
+                            }
+
+                            
+                            
+                            System.out.println(line);
                             //Setting Data to Objects
                             payDetail.setPaymentId(Integer.parseInt(lineData[0]));
                             payDetail.setPaymentDate(lineData[1]);
@@ -111,8 +129,11 @@ public class Task1ACIWorldWide {
             loyalCustomers.HighlyValued(payDetails);
             
           //To get information of Individual Customer
-            SearchCustomerDetails srCustomerDetails=new SearchCustomerDetails();
+           
             srCustomerDetails.SearchCustomerDetail();
+            srCustomerDetails.getInfo();
+           
+            
             
         }
         }
