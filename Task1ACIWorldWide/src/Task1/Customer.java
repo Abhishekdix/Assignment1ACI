@@ -1,9 +1,9 @@
 package Task1;
 class Customer {
 
-    String name;
-    String email;
-    String  phoneNo;
+ private   String name;
+   private String email;
+   private String  phoneNo;
 
    
 
