@@ -25,10 +25,7 @@ public class SearchCustomerDetails {
         try {
 			while ((line = reader.readLine()) != null) {
 			    // Create a FileDetails object
-			    if (payDetail == null) {
-//            	System.out.println("creating new object");
-			        payDetail = new Payment();
-			    }
+			   
 			    
 			    String[] lineData = line.split(",");
 			    custName.put(lineData[0],1);
@@ -42,7 +39,7 @@ public class SearchCustomerDetails {
 			
 }
 		
-//		this.getInfo(customers);
+
 		
 		
 		} 
@@ -55,18 +52,22 @@ public class SearchCustomerDetails {
 	
 	
 }
-	public void  getInfo() {
+	public void getInfo() {
 		System.out.println("Enter the Name of Customer\n");
 		Scanner inpScanner=new Scanner(System.in);
 		String findDetails;
 		findDetails=inpScanner.nextLine();
 		
-		System.out.println("Name"+"\t "+"Email"+"\t\t\t"+"PhoneNumber");
+		
 		for(Customer cust:customers) {
 			if((cust.getName()).equals(findDetails)) {
+				System.out.println("Name"+"\t "+"Email"+"\t\t\t"+"PhoneNumber");
 			System.out.println(cust.getName()+"\t "+cust.getEmail()+"\t  "+cust.getPhoneNo());
+			return ;
+	
 		}
-		}		
+		}
+		System.out.println("Customer Not Registered");
 	}
 	
 	public int verify(String custmerName) {
