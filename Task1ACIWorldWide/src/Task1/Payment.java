@@ -6,11 +6,11 @@ package Task1;
 
 class Payment {
 
-    int paymentId;
-    String paymentDate;
-    double paidAmount;
-    String paidBy;
-    String name;
+    private int paymentId;
+    private String paymentDate;
+    private double paidAmount;
+    private String paidBy;
+    private String name;
 
     public Payment() {
     }
