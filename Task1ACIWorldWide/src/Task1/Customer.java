@@ -1,9 +1,9 @@
 package Task1;
 class Customer {
 
- private   String employeeName;
-   private String employeeEmail;
-   private String employeePhoneNo;
+ private   String name;
+   private String email;
+   private String  phoneNo;
 
    
 
@@ -11,28 +11,28 @@ class Customer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getEmployeeName() {
-        return employeeName;
+	public String getName() {
+        return name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEmployeeEmail() {
-        return employeeEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmployeeEmail(String employeeEmail) {
-        this.employeeEmail = employeeEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getEmployeePhoneNo() {
-        return employeePhoneNo;
+    public String getPhoneNo() {
+        return phoneNo;
     }
 
-    public void setEmployeePhoneNo(String employeePhoneNo) {
-        this.employeePhoneNo = employeePhoneNo;
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
     }
 
 }
