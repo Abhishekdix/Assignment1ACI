@@ -31,9 +31,9 @@ public class SearchCustomerDetails {
 			    custName.put(lineData[0],1);
 			    
 			    Customer customer=new Customer();
-			    customer.setName(lineData[0]);
-			    customer.setEmail(lineData[1]);
-			    customer.setPhoneNo(lineData[2]);
+			    customer.setEmployeeName(lineData[0]);
+			    customer.setEmployeeEmail(lineData[1]);
+			    customer.setEmployeePhoneNo(lineData[2]);
 			    customers.add(customer);
 			
 			
@@ -60,9 +60,9 @@ public class SearchCustomerDetails {
 		
 		
 		for(Customer cust:customers) {
-			if((cust.getName()).equals(findDetails)) {
+			if((cust.getEmployeeName()).equals(findDetails)) {
 				System.out.println("Name"+"\t "+"Email"+"\t\t\t"+"PhoneNumber");
-			System.out.println(cust.getName()+"\t "+cust.getEmail()+"\t  "+cust.getPhoneNo());
+			System.out.println(cust.getEmployeeName()+"\t "+cust.getEmployeeEmail()+"\t  "+cust.getEmployeePhoneNo());
 			return ;
 	
 		}
